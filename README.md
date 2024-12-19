@@ -1,4 +1,4 @@
-# SNP Data Fetcher
+# SNP Data Fetcher - NCBI API TEST
 
 Este repositório contém um script Python que utiliza a API do NCBI para buscar informações sobre SNPs (Single Nucleotide Polymorphisms). O código acessa o banco de dados dbSNP da NCBI, obtém dados sobre um SNP específico utilizando o ID do SNP, e organiza as informações em tabelas formatadas.
 
