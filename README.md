@@ -1,15 +1,17 @@
-## Descrição do Script
-
-Este script é simples e direto, projetado para buscar e organizar dados de SNPs de forma eficiente. Seu objetivo é fornecer uma maneira fácil de acessar e visualizar informações detalhadas sobre SNPs, facilitando a análise e interpretação dos dados genéticos.
-
 # SNP Data Fetcher - NCBI API TEST
 
-Este repositório contém um script Python que utiliza a API do NCBI para buscar informações sobre SNPs (Polimorfismos de Nucleotídeo Único). O código acessa o banco de dados dbSNP da NCBI, obtém dados sobre um SNP específico utilizando o ID do SNP, e organiza as informações em tabelas formatadas.
+## Descrição do Script
+
+Este repositório contém um script Python simples e direto, projetado para buscar e organizar dados de SNPs (Polimorfismos de Nucleotídeo Único) de forma eficiente. Utilizando a API do NCBI, o código acessa o banco de dados dbSNP para obter informações detalhadas sobre SNPs, como ID, cromossomo, posição, gene associado, significância clínica e frequências alélicas. As informações são organizadas e exibidas em tabelas formatadas, facilitando a análise e interpretação de dados genéticos.
+
+## Aviso Importante
+
+Os SNP IDs utilizados no script `ncbiapirest_test.py` estão definidos de forma fixa (hardcoded). Certifique-se de editar o código caso precise consultar IDs diferentes.
 
 ## Funcionalidades
 
 - **Busca de dados de SNP**: Através do ID de SNP fornecido, o script consulta a API do NCBI e obtém um resumo dos dados em formato XML.
-- **Parsing de dados XML**: Extrai informações relevantes do XML, como o ID do SNP, cromossomo, posição, nome e ID do gene associado, significância clínica e frequências alélicas.
+- **Análise de dados XML**: Extrai informações relevantes do XML, como ID do SNP, cromossomo, posição, nome e ID do gene associado, significância clínica e frequências alélicas.
 - **Apresentação de dados**: Os dados extraídos são organizados em dois DataFrames: um para informações gerais do SNP e outro para as frequências alélicas (MAF - Minor Allele Frequency).
 
 ## Requisitos
@@ -18,9 +20,9 @@ Certifique-se de ter as seguintes bibliotecas instaladas:
 
 - `requests`: para fazer as requisições HTTP à API do NCBI.
 - `xml.etree.ElementTree`: para analisar os dados XML retornados pela API.
-- `pandas`: para organizar e exibir os dados de forma tabular.
+- `pandas`: para organizar e exibir os dados em formato tabular.
 
-Você pode instalá-las utilizando o `pip`:
+Instale-as utilizando o comando:
 
 ```bash
 pip install requests pandas
@@ -30,9 +32,22 @@ pip install requests pandas
 
 Para executar o script, siga as instruções abaixo:
 
-1. Clone este repositório para o seu ambiente local.
-2. Instale as bibliotecas necessárias utilizando o comando `pip install requests pandas`.
-3. Execute o script `ncbiapirest_test.py` com o comando `python ncbiapirest_test.py`.
+1. Clone este repositório para o seu ambiente local:
+   ```bash
+   git clone https://github.com/seu-usuario/snp-data-fetcher.git
+   ```
+2. Acesse o diretório do projeto:
+   ```bash
+   cd snp-data-fetcher
+   ```
+3. Instale as dependências necessárias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Execute o script:
+   ```bash
+   python ncbiapirest_test.py
+   ```
 
 ## Exemplo de Uso
 
@@ -56,16 +71,32 @@ Tabela de Frequências Alélicas:
 | Study2  | 0.2       |
 ```
 
+## Estrutura do Repositório
+
+- `ncbiapirest_test.py`: Script principal para buscar e organizar dados de SNPs.
+- `requirements.txt`: Lista de dependências necessárias para o projeto.
+- `README.md`: Documentação do projeto.
+
 ## Contribuindo
 
 Se você deseja contribuir com este projeto, siga as diretrizes abaixo:
 
 1. Faça um fork deste repositório.
-2. Crie uma nova branch para a sua feature (`git checkout -b feature/nova-feature`).
-3. Commit suas alterações (`git commit -m 'Adiciona nova feature'`).
-4. Faça o push para a branch (`git push origin feature/nova-feature`).
-5. Abra um Pull Request.
+2. Crie uma nova branch para a sua feature:
+   ```bash
+   git checkout -b feature/nova-feature
+   ```
+3. Commit suas alterações:
+   ```bash
+   git commit -m 'Adiciona nova feature'
+   ```
+4. Envie para o repositório remoto:
+   ```bash
+   git push origin feature/nova-feature
+   ```
+5. Abra um Pull Request para revisão.
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+
