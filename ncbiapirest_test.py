@@ -38,7 +38,7 @@ def parse_snp_data(xml_data):
 
     return snp_data
 
-# Testar a função com o SNP ID 1042522
+# Testar a função com o SNP ID rs334, não adicionar o "rs" ao campo
 snp_id = "334"
 xml_data = get_snp_summary(snp_id)
 parsed_data = parse_snp_data(xml_data)
