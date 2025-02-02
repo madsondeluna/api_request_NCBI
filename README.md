@@ -4,6 +4,12 @@
 
 Este repositório contém um script Python simples e direto, projetado para buscar e organizar dados de SNPs (Polimorfismos de Nucleotídeo Único) de forma eficiente. Utilizando a API do NCBI, o código acessa o banco de dados dbSNP para obter informações detalhadas sobre SNPs, como ID, cromossomo, posição, gene associado, significância clínica e frequências alélicas. As informações são organizadas e exibidas em tabelas formatadas, facilitando a análise e interpretação de dados genéticos.
 
+## Diagrama de Fluxo da Aplicação
+
+Abaixo, você encontra um diagrama de fluxo que detalha o funcionamento do script.
+
+<img src="Script_diagram.svg" alt="Diagrama de Fluxo da Aplicação" width="600"/>
+
 ## Aviso Importante
 
 Os SNP IDs utilizados no script `ncbiapirest_test.py` estão definidos de forma fixa (hardcoded). Certifique-se de editar o código caso precise consultar IDs diferentes.
@@ -48,12 +54,6 @@ Para executar o script, siga as instruções abaixo:
    ```bash
    python ncbiapirest_test.py
    ```
-
-## Diagrama de Fluxo da Aplicação
-
-Abaixo, você encontra um diagrama de fluxo que detalha de forma técnica e amigável o funcionamento do script.
-
-<img src="FlowchartApp.png" alt="Diagrama de Fluxo da Aplicação" width="600"/>
 
 ## Exemplo de Erro de Conexão
 
