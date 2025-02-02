@@ -49,9 +49,24 @@ Para executar o script, siga as instruções abaixo:
    python ncbiapirest_test.py
    ```
 
+## Diagrama de Fluxo da Aplicação
+
+Abaixo, você encontra um diagrama de fluxo que detalha de forma técnica e amigável o funcionamento do script.
+
+<img src="FlowchartApp.png" alt="Diagrama de Fluxo da Aplicação" width="600"/>
+
+## Exemplo de Erro de Conexão
+
+Caso o script não consiga acessar a API do NCBI devido a problemas de rede ou firewall, você pode encontrar a seguinte mensagem de erro:
+
+- **HTTP Status Code 503:** This indicates that the NCBI API server is currently unavailable.
+- **Message:** A descriptive message provided by the server or the script explaining the issue.
+
+Certifique-se de verificar sua conexão com a internet e suas configurações de proxy ou firewall antes de tentar novamente.
+
 ## Exemplo de Uso
 
-Aqui está um exemplo de saída ao executar o script com o SNP ID 334:
+Ao executar o script com o SNP ID 334, a saída gerada é semelhante a:
 
 ```
 Informações Gerais do SNP:
@@ -76,6 +91,8 @@ Tabela de Frequências Alélicas:
 - `ncbiapirest_test.py`: Script principal para buscar e organizar dados de SNPs.
 - `requirements.txt`: Lista de dependências necessárias para o projeto.
 - `README.md`: Documentação do projeto.
+- `snp_data_fetcher_diagram.png`: Diagrama de fluxo da aplicação.
+- `image001.png`: Exemplo de erro de conexão.
 
 ## Contribuindo
 
@@ -86,7 +103,7 @@ Se você deseja contribuir com este projeto, siga as diretrizes abaixo:
    ```bash
    git checkout -b feature/nova-feature
    ```
-3. Commit suas alterações:
+3. Faça o commit das suas alterações:
    ```bash
    git commit -m 'Adiciona nova feature'
    ```
