@@ -14,7 +14,7 @@ def get_snp_summary(snp_id):
 def parse_snp_data(xml_data):
     root = ET.fromstring(xml_data)
 
-    # Procurando o nó principal
+    # Procurando no nó principal
     document_summary = root.find(".//DocumentSummary")
 
     if document_summary is None:
